@@ -1,0 +1,30 @@
+@import "variables";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::selection {
+  background: $body-background;
+}
+
+body {
+  font-family: $body-font-family;
+  background: linear-gradient($body-background 55%, $primary-color);
+  color: $body-color;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

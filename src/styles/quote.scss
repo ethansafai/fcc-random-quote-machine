@@ -1,0 +1,68 @@
+@import "variables";
+
+$btn-color: $body-background;
+$btn-background: $body-color;
+
+#quote-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 2px #ccc;
+}
+
+#text {
+  font-size: 1.25rem;
+}
+
+#text::before, #text::after {
+  content: "\"";
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+#author::before {
+  content: "— ";
+}
+
+.btn-group {
+  display: flex;
+  gap: 1rem;
+}
+
+#new-quote, #tweet-quote {
+  border: none;
+  outline: none;
+  background-color: $btn-background;
+  color: $btn-color;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $btn-color;
+    color: $btn-background;
+  }
+}
+
+@media (max-width: 576px) {
+  #text, #author, #new-quote, #tweet-quote {
+    font-size: 0.9rem;
+  }
+
+  #text::before, #text::after {
+    font-size: 1.25rem;
+  }
+
+  #quote-box {
+    width: 90%;
+  }
+}
